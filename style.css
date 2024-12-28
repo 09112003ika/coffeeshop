@@ -1,0 +1,154 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+                url('login.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Wrapper container for centering and spacing */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Title above login */
+.wrapper-title {
+    font-size: 26px;
+    color: #ff9800;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Login container */
+.login-container {
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(10px); /* Blur for the glass effect */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #e67e00;
+    transform: scale(1.03);
+}
+
+/* Error Message */
+.error-message {
+    color: #ff5252;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Link for registration */
+a {
+    display: block;
+    margin-top: 15px;
+    color: #ddd;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    .wrapper {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .login-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,222 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f3f2f2; /* Soft background color */
+    color: #3e3e3e; /* Dark gray text color */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #3e2723; /* Dark coffee brown */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #d35400; /* Light coffee orange for hover effect */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #6f4f1f, #4e3629); /* Gradient with coffee shades */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Menu Section */
+.menu {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff8f0; /* Light beige background for the menu */
+}
+
+.menu h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #3e2723; /* Dark coffee color for the heading */
+}
+
+/* Grid Layout for Menu Items */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #e67e22; /* Highlight color */
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #3e2723; /* Dark coffee color */
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #7f8c8d; /* Soft gray text */
+    margin-bottom: 15px;
+}
+
+.menu-item strong {
+    display: block;
+    font-weight: bold;
+    color: #3e2723;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Style for Add to Cart Form */
+.add-to-cart-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-container label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #3e2723; /* Dark coffee color */
+}
+
+.quantity-container input {
+    width: 50px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.quantity-container input:focus {
+    border-color: #d35400; /* Highlight color for focus */
+    outline: none;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #e67e22; /* Coffee orange color */
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #d35400;
+    transform: translateY(-3px);
+}
+
+.add-to-cart-btn:focus {
+    outline: none;
+}
+
+.add-to-cart-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Add to Cart Button Icon */
+.add-to-cart-btn::before {
+    content: url('cart-icon.svg'); /* Add a cart icon (replace 'cart-icon.svg' with your icon path) */
+    width: 20px;
+    height: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #3e2723; /* Dark coffee brown */
+    color: #ecf0f1; /* Light gray text */
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 14px;
+    border-top: 2px solid #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .menu h2 {
+        font-size: 24px;
+    }
+}

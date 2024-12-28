@@ -1,0 +1,651 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Slightly lighter background */
+    color: #4e2a14; /* Darker brown text */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Increased padding for better spacing */
+    background-color: #6c4613; /* Rich brown background */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: sticky;
+    top: 0; /* Keeps the navbar fixed on top */
+    z-index: 1000; /* Ensure the navbar stays above other content */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Navbar Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #ff9800; /* Color change for logo on hover */
+}
+
+/* Navbar Links */
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px; /* Increased margin for better spacing */
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Navbar Links */
+.navbar a:hover {
+    color: #ff9800; /* Bright color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px 15px; /* Adjusted padding for smaller screens */
+    }
+
+    .navbar a {
+        margin: 10px 0; /* Stacked links with space */
+    }
+
+    .navbar .logo {
+        margin-bottom: 20px; /* Added space below logo */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('header.jpeg') no-repeat center center / cover, rgba(0, 0, 0, 0.1); /* Gambar latar belakang dengan transparansi */
+    color: #fff;
+    text-align: center;
+    padding: 40px 15px; /* Reduced padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for a lifted effect */
+    transition: transform 0.3s ease-in-out; /* Animation effect */
+}
+
+.hero:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+.hero h1 {
+    font-size: 36px; /* Smaller title */
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif; /* Clean font */
+    letter-spacing: 1px; /* Reduced letter spacing */
+    text-transform: uppercase; /* Making the text bold and uppercase */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+.hero p {
+    font-size: 16px; /* Smaller paragraph font size */
+    line-height: 1.5; /* Adjusted line height for better readability */
+    font-family: 'Arial', sans-serif;
+    font-weight: 300; /* Lighter font weight */
+    opacity: 0.9; /* Slight transparency */
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px; /* Adjust font size further on smaller screens */
+    }
+
+    .hero p {
+        font-size: 14px; /* Adjust font size further on smaller screens */
+    }
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #775637, #dec4af);
+    gap: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Fade-in animasi untuk seluruh section */
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    opacity: 0;
+    animation: slideInLeft 1.5s 0.5s forwards; /* Sliding effect untuk gambar */
+}
+
+.about-image img {
+    width: 55%;
+    height: 78%; 
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; /* Efek hover pada gambar */
+}
+
+.about-image img:hover {
+    transform: scale(1.1); /* Membesar sedikit saat hover */
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    opacity: 0;
+    animation: slideInRight 1.5s 0.5s forwards; /* Sliding effect untuk konten */
+}
+
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #171616;
+    text-align: center;
+    animation: fadeInText 1s ease-out forwards; /* Fade-in untuk heading */
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    animation: fadeInText 1s ease-out forwards; /* Fade-in untuk paragraf */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 608px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-content {
+        padding: 10px;
+    }
+}
+
+
+/* Menu Section */
+.menu {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8; /* Latar belakang yang lebih ringan */
+    position: relative;
+}
+
+.menu h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #6f4f2e; /* Warna gelap kopi untuk kesan yang lebih hangat */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out forwards; /* Animasi masuk */
+}
+
+/* Menu Item Styling */
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Bayangan lebih besar untuk efek mengambang */
+    text-align: center;
+    width: 280px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi efek hover */
+    cursor: pointer;
+    overflow: hidden; /* Menjaga konten tetap teratur */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Efek angkat sedikit saat hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease; /* Animasi untuk gambar */
+}
+
+.menu-item img:hover {
+    transform: scale(1.05); /* Membesarkan gambar sedikit saat hover */
+}
+
+.menu-item h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Remove underline from links */
+.menu-item a {
+    text-decoration: none; /* Ensures no underline on text links */
+    color: inherit; /* Inherits color from parent */
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-grid {
+        flex-direction: column; /* Mengubah menjadi kolom pada layar kecil */
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .menu h2 {
+        font-size: 28px;
+    }
+}
+
+
+
+/* Additional Offerings Section */
+.additional-offerings {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    background: linear-gradient(135deg, #6f4f2e, #734a2d); /* Gradient background */
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.additional-offerings h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.offerings-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.offering-item {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden; /* Ensures border-radius effect on images */
+}
+
+.offering-item:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.offering-item h3 {
+    font-size: 22px;
+    color: #6c4613;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.offering-item p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.offering-item:hover p {
+    color: #6c4613; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offerings-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offering-item {
+        width: 80%;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+}
+
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #6c4613;
+}
+
+/* Story Section */
+.story-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.story-section h2 {
+    font-size: 36px;
+    color: #6c4613; /* Warna coklat gelap untuk lebih menonjol */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease; /* Efek transisi pada warna */
+}
+
+/* Hover effect on title */
+.story-section h2:hover {
+    color: #734a2d; /* Warna lebih cerah saat hover */
+}
+
+/* Story Container */
+.story-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Make it responsive */
+    padding: 20px;
+    animation: fadeIn 1s ease-out; /* Animasi masuk untuk container */
+}
+
+/* Story Text */
+.story-text {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    padding-right: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 300;
+    text-align: justify; /* Menambahkan perataan teks */
+    transition: transform 0.3s ease; /* Efek animasi pada teks */
+}
+
+.story-text:hover {
+    transform: translateX(5px); /* Efek geser teks sedikit saat hover */
+}
+
+/* Story Image */
+.story-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; /* Efek transisi pada gambar */
+}
+
+.story-image img {
+    max-width: 65%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Bayangan lebih soft */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi untuk gambar */
+}
+
+.story-image img:hover {
+    transform: scale(1.05); /* Membesarkan gambar sedikit saat hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Membuat bayangan lebih besar */
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .story-container {
+        flex-direction: column; 
+    }
+
+    .story-text {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .story-image {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+/* Gallery */
+.gallery {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fdfcfb, #dec4af); 
+    overflow: hidden; /* Mencegah overflow */
+}
+
+.gallery h2 {
+    font-size: 36px;
+    color: #6c4613;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards; /* Efek muncul saat scroll */
+    animation-delay: 0.2s;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Tambahkan jarak antar gambar */
+}
+
+/* Gallery Styling */
+.gallery-images img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px; /* Membuat sudut gambar melengkung */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Bayangan awal */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transisi halus untuk efek */
+}
+
+/* Efek saat kursor mendekati gambar */
+.gallery-images img:hover {
+    transform: scale(1.1); /* Perbesar gambar sedikit */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Tambahkan bayangan lebih besar */
+    filter: brightness(1.2); /* Tingkatkan kecerahan gambar */
+    cursor: pointer; /* Ubah kursor menjadi tangan untuk interaktivitas */
+}
+
+/* Keyframes untuk animasi */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scroll-trigger Animation */
+.gallery-images img:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.gallery-images img:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.gallery-images img:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.gallery-images img:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.gallery-images img:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.gallery-images img:nth-child(6) {
+    animation-delay: 0.6s;
+}
+.gallery-images img:nth-child(7) {
+    animation-delay: 0.7s;
+}
+.gallery-images img:nth-child(8) {
+    animation-delay: 0.8s;
+}
+.gallery-images img:nth-child(9) {
+    animation-delay: 0.9s;
+}
+.gallery-images img:nth-child(10) {
+    animation-delay: 1s;
+}
+.gallery-images img:nth-child(11) {
+    animation-delay: 1.1s;
+}
+.gallery-images img:nth-child(12) {
+    animation-delay: 1.2s;
+}
+
+
+/* Footer */
+footer {
+    background-color: #6c4613;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
